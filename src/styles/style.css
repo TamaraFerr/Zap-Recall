@@ -1,11 +1,12 @@
 .container{
     width: 100%;
-    height: 100vh;
+    height: 100vw;
+    background-color: #FB6B6B;
 }
 
 .container-principal{
     width: 100%;
-    height: 100%;
+    height: 100vw;
     background-color: #FB6B6B;
 }
 
@@ -33,11 +34,16 @@
     background-color: #FFFFFF;
     position: fixed;
     bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flashcards{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 59px;
     box-sizing: border-box;
 }
@@ -88,6 +94,7 @@
     height: 131px;
     border-radius: 5px;
     background-color: #FFFFD4;
+    margin-bottom: 25px;
 }
 
 .card-answer > p {

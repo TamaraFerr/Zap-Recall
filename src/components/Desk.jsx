@@ -1,19 +1,19 @@
-import Flashcard from "./Flashcard";
-import Footer from "./Footer";
-import Logo from "../assets/logo.png"
+import Flashcards from "./Flashcards";
+import mocks from "./mock";
 
-export default function Desk(){
+export default function Desk(props){
     return(
         <div className="container-principal">
-            <div className="header">
-                <img src={Logo} className="logo-zap"/>
-                <h1 className="titulo">ZapRecall</h1>
-            </div>
             <div className="flashcards">
-                <Flashcard />
-            </div>
-            <div className="footer">
-                <Footer />
+                {mocks.map((mock, index) =>
+                    <Flashcards 
+                    key={index} 
+                    index={index}
+                    question={mock.question}
+                    answer={mock.answer}
+                    count={props.count}
+                    />
+                )}
             </div>
         </div>
     )
