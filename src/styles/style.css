@@ -142,3 +142,18 @@
     font-size: 12px;
     font-weight: 400;
 }
+
+.error {
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.right {
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+
+.almost {
+    color: #FF922E;
+    text-decoration: line-through;
+}

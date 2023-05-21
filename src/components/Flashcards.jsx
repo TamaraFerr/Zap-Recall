@@ -1,6 +1,5 @@
 import Question from "./Question"
 import { useState } from "react"
-import Play from "../assets/seta_play.png"
 
 export default function Flashcards(props){
     const [clicked, setClicked] = useState(false)
@@ -8,7 +7,7 @@ export default function Flashcards(props){
     const [config, setConfig] = useState({
         classe:"",
         teste: "play-btn",
-        icon: "",
+        icon: "../assets/seta_play.png",
         desabilitado: false, 
     })
 
@@ -32,7 +31,7 @@ export default function Flashcards(props){
                 /> :
                 <div className={`cards ${config.classe}`} data-test="flashcard">
                     <p data-test="flashcard-text">{`Pergunta ${props.index + 1}`}</p>
-                    <img src={Play} className="seta-play" alt="seta-play" data-test={config.teste} onClick={handleClick}/>
+                    <img src={config.icon} className="seta-play" alt="seta-play" data-test={config.teste} onClick={handleClick}/>
                 </div>
             }
         </div>
