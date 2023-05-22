@@ -1,159 +1,31 @@
-.container{
-    width: 100%;
-    height: 100vw;
-    background-color: #FB6B6B;
-}
-
-.container-principal{
-    width: 100%;
-    height: 100vw;
-    background-color: #FB6B6B;
-}
-
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-zap{
-    width: 52px;
-    height: 60px;
-}
-
-.titulo{
-    font-size: 36px;
-    font-weight: 400;
-    text-align: center;
-    color: #ffffff;
-}
-
-.footer{
-    width: 100%;
-    height: 70px;
-    background-color: #FFFFFF;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flashcards{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 59px;
-    box-sizing: border-box;
-}
-
-.card-container{
-    width: 300px;
-}
-
-.cards{
+.zap-questions {
+    margin-top: 25px;
     width: 100%;
     height: 65px;
+    background-color: #FFFFFF;
     border-radius: 5px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    box-sizing: border-box;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.cards > p {
     font-size: 16px;
     font-weight: 700;
-}
-
-.seta-play{
-    width: 20px;
-    height: 23px;
-}
-
-.card-question{
-    width: 100%;
-    height: 131px;
-    border-radius: 5px;
-    background-color: #FFFFD4;
-    margin-bottom: 25px;
-}
-
-.card-question > p {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.card-answer{
-    width: 100%;
-    height: 131px;
-    border-radius: 5px;
-    background-color: #FFFFD4;
-    margin-bottom: 25px;
-}
-
-.card-answer > p {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.buttons{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-left: 14px;
-    padding-right: 14px;
+    justify-content: space-between;
 }
 
-.no{
-    width: 85.17px;
-    height: 37.17px;
-    border-radius: 5px;
-    border: none;
-    background-color: #FF3030;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 400;
+.zap-start {
+    margin-right: 15px;
 }
 
-.maybe{
-    width: 85.17px;
-    height: 37.17px;
-    border-radius: 5px;
-    border: none;
-    background-color: #FF922E;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.zap{
-    width: 85.17px;
-    height: 37.17px;
-    border-radius: 5px;
-    border: none;
-    background-color: #2FBE34;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.error {
+.erro {
     color: #FF3030;
     text-decoration: line-through;
 }
 
-.right {
+.certo {
     color: #2FBE34;
     text-decoration: line-through;
 }
 
-.almost {
+.quase {
     color: #FF922E;
     text-decoration: line-through;
 }

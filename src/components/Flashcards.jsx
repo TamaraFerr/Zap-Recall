@@ -1,13 +1,14 @@
-import Question from "./Question"
 import { useState } from "react"
+import { styled } from "styled-components"
+import Question from "./Question"
 
-export default function Flashcards(props){
+export default function Flashcard(props) {
     const [clicked, setClicked] = useState(false)
 
     const [config, setConfig] = useState({
-        classe:"",
+        classe:"", 
+        icon: "./assets/seta_play.png" , 
         teste: "play-btn",
-        icon: "../assets/seta_play.png",
         desabilitado: false, 
     })
 
@@ -18,22 +19,17 @@ export default function Flashcards(props){
         }
     }
 
-
-    return(
-        <div className="card-container">
-            {clicked ? <Question 
-                question={props.question} 
-                answer={props.answer} 
-                clicked={setClicked} 
-                index={props.index} 
-                setConfig={setConfig} 
-                count={props.count}
-                /> :
-                <div className={`cards ${config.classe}`} data-test="flashcard">
-                    <p data-test="flashcard-text">{`Pergunta ${props.index + 1}`}</p>
-                    <img src={config.icon} className="seta-play" alt="seta-play" data-test={config.teste} onClick={handleClick}/>
-                </div>
-            }
-        </div>
+    return (
+        <li>
+            {clicked ?  <Question question={props.question} answer={props.answer} clicked={setClicked} index={props.index} setConfig={setConfig} count={props.count}/>  :
+                <div className={`zap-questions ${config.classe}`} data-test="flashcard">
+                    <TitleOne data-test="flashcard-text">{`Pergunta ${props.index + 1}`}</TitleOne>
+                    <img src={config.icon} className="zap-start" alt="zap-start" data-test={config.teste} onClick={handleClick}/>
+                </div>}
+        </li>
     )
 }
+
+const TitleOne = styled.p `
+    padding-left: 10px;
+`
