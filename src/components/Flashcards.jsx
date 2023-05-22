@@ -7,14 +7,14 @@ export default function Flashcard(props) {
 
     const [config, setConfig] = useState({
         classe:"", 
-        icon: "./assets/seta_play.png" , 
+        icon: "/assets/seta_play.png" , 
         teste: "play-btn",
-        desabilitado: false, 
+        desabled: false, 
     })
 
     function handleClick() {
 
-        if(config.desabilitado === false){
+        if(config.desabled === false){
             setClicked(true)
         }
     }
@@ -24,7 +24,7 @@ export default function Flashcard(props) {
             {clicked ?  <Question question={props.question} answer={props.answer} clicked={setClicked} index={props.index} setConfig={setConfig} count={props.count}/>  :
                 <div className={`zap-questions ${config.classe}`} data-test="flashcard">
                     <TitleOne data-test="flashcard-text">{`Pergunta ${props.index + 1}`}</TitleOne>
-                    <img src={config.icon} className="zap-start" alt="zap-start" data-test={config.teste} onClick={handleClick}/>
+                    <Play src={config.icon} className="zap-start" alt="zap-start" data-test={config.teste} onClick={handleClick}/>
                 </div>}
         </li>
     )
@@ -32,4 +32,7 @@ export default function Flashcard(props) {
 
 const TitleOne = styled.p `
     padding-left: 10px;
+`
+const Play = styled.img`
+    margin-right: 15px;
 `
