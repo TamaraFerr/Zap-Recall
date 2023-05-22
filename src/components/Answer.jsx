@@ -1,9 +1,12 @@
 import styled from "styled-components"
+import Certo from "../assets/icone_certo.png"
+import Errado from "../assets/icone_erro.png"
+import Quase from "../assets/icone_quase.png"
 
 export default function Answers(props) {  
-    const wrong = ["error", "/assets/icone_erro.png", "no-icon", true]
-    const almost = ["almost", "/assets/icone_quase.png", "partial-icon", true]
-    const zap = ["right", "/assets/icone_certo.png", "zap-icon", true]
+    const wrong = ["error", `${Errado}`, "no-icon", true]
+    const almost = ["almost", `${Quase}`, "partial-icon", true]
+    const zap = ["right", `${Certo}`, "zap-icon", true]
     const { contador, setContador } = props.count
 
     function handleClick(classe, icon, teste, desabled) {

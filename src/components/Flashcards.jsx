@@ -1,13 +1,14 @@
 import { useState } from "react"
 import { styled } from "styled-components"
 import Question from "./Question"
+import PlayBTN from "../assets/seta_play.png"
 
 export default function Flashcard(props) {
     const [clicked, setClicked] = useState(false)
 
     const [config, setConfig] = useState({
         classe:"", 
-        icon: "/assets/seta_play.png" , 
+        icon: `${PlayBTN}` , 
         teste: "play-btn",
         desabled: false, 
     })
